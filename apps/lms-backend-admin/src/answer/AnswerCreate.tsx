@@ -4,6 +4,7 @@ import {
   Create,
   SimpleForm,
   CreateProps,
+  DateTimeInput,
   BooleanInput,
   NumberInput,
   ReferenceInput,
@@ -17,6 +18,7 @@ export const AnswerCreate = (props: CreateProps): React.ReactElement => {
   return (
     <Create {...props}>
       <SimpleForm>
+        <DateTimeInput label="deletedAt" source="deletedAt" />
         <BooleanInput label="isCorrect" source="isCorrect" />
         <NumberInput step={1} label="orderNumber" source="orderNumber" />
         <div />

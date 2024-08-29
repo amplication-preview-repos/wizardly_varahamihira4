@@ -1,14 +1,14 @@
 import { Module } from "@nestjs/common";
 import { CourseModule } from "./course/course.module";
 import { PackageModelModule } from "./packageModel/packageModel.module";
-import { VideoModule } from "./video/video.module";
+import { TestModule } from "./test/test.module";
 import { LocaleModule } from "./locale/locale.module";
 import { TextMaterialModule } from "./textMaterial/textMaterial.module";
 import { LessonModule } from "./lesson/lesson.module";
-import { TestModule } from "./test/test.module";
-import { PracticeModule } from "./practice/practice.module";
-import { UserPackageModule } from "./userPackage/userPackage.module";
+import { VideoModule } from "./video/video.module";
 import { AnswerModule } from "./answer/answer.module";
+import { UserPackageModule } from "./userPackage/userPackage.module";
+import { PracticeModule } from "./practice/practice.module";
 import { UserModule } from "./user/user.module";
 import { UserPracticeResponseModule } from "./userPracticeResponse/userPracticeResponse.module";
 import { HealthModule } from "./health/health.module";
@@ -25,14 +25,14 @@ import { ApolloDriver, ApolloDriverConfig } from "@nestjs/apollo";
   imports: [
     CourseModule,
     PackageModelModule,
-    VideoModule,
+    TestModule,
     LocaleModule,
     TextMaterialModule,
     LessonModule,
-    TestModule,
-    PracticeModule,
-    UserPackageModule,
+    VideoModule,
     AnswerModule,
+    UserPackageModule,
+    PracticeModule,
     UserModule,
     UserPracticeResponseModule,
     HealthModule,

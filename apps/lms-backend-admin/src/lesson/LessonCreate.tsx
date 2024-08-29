@@ -5,6 +5,7 @@ import {
   SimpleForm,
   CreateProps,
   TextInput,
+  DateTimeInput,
   ReferenceInput,
   SelectInput,
   ReferenceArrayInput,
@@ -22,6 +23,7 @@ export const LessonCreate = (props: CreateProps): React.ReactElement => {
     <Create {...props}>
       <SimpleForm>
         <TextInput label="content" multiline source="content" />
+        <DateTimeInput label="deletedAt" source="deletedAt" />
         <ReferenceInput
           source="packageField.id"
           reference="PackageModel"

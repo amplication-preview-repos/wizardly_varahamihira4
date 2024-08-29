@@ -48,6 +48,17 @@ class Lesson {
   createdAt!: Date;
 
   @ApiProperty({
+    required: false,
+  })
+  @IsDate()
+  @Type(() => Date)
+  @IsOptional()
+  @Field(() => Date, {
+    nullable: true,
+  })
+  deletedAt!: Date | null;
+
+  @ApiProperty({
     required: true,
     type: String,
   })

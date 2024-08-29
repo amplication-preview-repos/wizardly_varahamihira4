@@ -15,10 +15,11 @@ import {
   IsString,
   MaxLength,
   IsOptional,
+  IsDate,
   ValidateNested,
 } from "class-validator";
-import { LessonWhereUniqueInput } from "../../lesson/base/LessonWhereUniqueInput";
 import { Type } from "class-transformer";
+import { LessonWhereUniqueInput } from "../../lesson/base/LessonWhereUniqueInput";
 
 @InputType()
 class TextMaterialCreateInput {
@@ -33,6 +34,17 @@ class TextMaterialCreateInput {
     nullable: true,
   })
   content?: string | null;
+
+  @ApiProperty({
+    required: false,
+  })
+  @IsDate()
+  @Type(() => Date)
+  @IsOptional()
+  @Field(() => Date, {
+    nullable: true,
+  })
+  deletedAt?: Date | null;
 
   @ApiProperty({
     required: false,

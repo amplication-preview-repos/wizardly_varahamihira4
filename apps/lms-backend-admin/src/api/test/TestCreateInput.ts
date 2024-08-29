@@ -4,6 +4,7 @@ import { InputJsonValue } from "../../types";
 
 export type TestCreateInput = {
   answers?: AnswerCreateNestedManyWithoutTestsInput;
+  deletedAt?: Date | null;
   lesson?: LessonWhereUniqueInput | null;
   questions?: InputJsonValue;
 };

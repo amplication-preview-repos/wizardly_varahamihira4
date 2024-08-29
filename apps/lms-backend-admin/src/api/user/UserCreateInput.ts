@@ -5,6 +5,7 @@ import { UserPracticeResponseCreateNestedManyWithoutUsersInput } from "./UserPra
 
 export type UserCreateInput = {
   answers?: AnswerCreateNestedManyWithoutUsersInput;
+  deletedAt?: Date | null;
   email?: string | null;
   firstName?: string | null;
   lastName?: string | null;

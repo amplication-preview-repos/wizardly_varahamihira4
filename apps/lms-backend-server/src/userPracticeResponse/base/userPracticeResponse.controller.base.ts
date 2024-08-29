@@ -48,6 +48,7 @@ export class UserPracticeResponseControllerBase {
       },
       select: {
         createdAt: true,
+        deletedAt: true,
         id: true,
 
         practice: {
@@ -79,6 +80,7 @@ export class UserPracticeResponseControllerBase {
       ...args,
       select: {
         createdAt: true,
+        deletedAt: true,
         id: true,
 
         practice: {
@@ -109,6 +111,7 @@ export class UserPracticeResponseControllerBase {
       where: params,
       select: {
         createdAt: true,
+        deletedAt: true,
         id: true,
 
         practice: {
@@ -162,6 +165,7 @@ export class UserPracticeResponseControllerBase {
         },
         select: {
           createdAt: true,
+          deletedAt: true,
           id: true,
 
           practice: {
@@ -201,6 +205,7 @@ export class UserPracticeResponseControllerBase {
         where: params,
         select: {
           createdAt: true,
+          deletedAt: true,
           id: true,
 
           practice: {

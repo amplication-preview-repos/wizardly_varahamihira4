@@ -6,6 +6,7 @@ import {
   CreateProps,
   ReferenceArrayInput,
   SelectArrayInput,
+  DateTimeInput,
   ReferenceInput,
   SelectInput,
 } from "react-admin";
@@ -25,6 +26,7 @@ export const TestCreate = (props: CreateProps): React.ReactElement => {
         >
           <SelectArrayInput optionText={AnswerTitle} />
         </ReferenceArrayInput>
+        <DateTimeInput label="deletedAt" source="deletedAt" />
         <ReferenceInput source="lesson.id" reference="Lesson" label="lesson">
           <SelectInput optionText={LessonTitle} />
         </ReferenceInput>

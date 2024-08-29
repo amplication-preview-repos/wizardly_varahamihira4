@@ -4,6 +4,7 @@ import {
   Edit,
   SimpleForm,
   EditProps,
+  DateTimeInput,
   TextInput,
   ReferenceArrayInput,
   SelectArrayInput,
@@ -16,6 +17,7 @@ export const CourseEdit = (props: EditProps): React.ReactElement => {
   return (
     <Edit {...props}>
       <SimpleForm>
+        <DateTimeInput label="deletedAt" source="deletedAt" />
         <TextInput label="description" multiline source="description" />
         <TextInput label="language" source="language" />
         <ReferenceArrayInput

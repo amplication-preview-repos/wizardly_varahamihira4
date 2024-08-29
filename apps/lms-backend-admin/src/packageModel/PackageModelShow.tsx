@@ -23,6 +23,7 @@ export const PackageModelShow = (props: ShowProps): React.ReactElement => {
           <TextField source={COURSE_TITLE_FIELD} />
         </ReferenceField>
         <DateField source="createdAt" label="Created At" />
+        <TextField label="deletedAt" source="deletedAt" />
         <TextField label="endDate" source="endDate" />
         <TextField label="homeworkCheckEndDate" source="homeworkCheckEndDate" />
         <TextField label="ID" source="id" />
@@ -38,6 +39,7 @@ export const PackageModelShow = (props: ShowProps): React.ReactElement => {
           <Datagrid rowClick="show">
             <TextField label="content" source="content" />
             <DateField source="createdAt" label="Created At" />
+            <TextField label="deletedAt" source="deletedAt" />
             <TextField label="ID" source="id" />
             <ReferenceField
               label="package"
@@ -57,6 +59,7 @@ export const PackageModelShow = (props: ShowProps): React.ReactElement => {
         >
           <Datagrid rowClick="show">
             <DateField source="createdAt" label="Created At" />
+            <TextField label="deletedAt" source="deletedAt" />
             <TextField label="ID" source="id" />
             <ReferenceField
               label="package"

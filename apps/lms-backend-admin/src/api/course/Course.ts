@@ -2,6 +2,7 @@ import { PackageModel } from "../packageModel/PackageModel";
 
 export type Course = {
   createdAt: Date;
+  deletedAt: Date | null;
   description: string | null;
   id: string;
   language: string | null;

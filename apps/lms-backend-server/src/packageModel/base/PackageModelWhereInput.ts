@@ -44,6 +44,17 @@ class PackageModelWhereInput {
   @Field(() => DateTimeNullableFilter, {
     nullable: true,
   })
+  deletedAt?: DateTimeNullableFilter;
+
+  @ApiProperty({
+    required: false,
+    type: DateTimeNullableFilter,
+  })
+  @Type(() => DateTimeNullableFilter)
+  @IsOptional()
+  @Field(() => DateTimeNullableFilter, {
+    nullable: true,
+  })
   endDate?: DateTimeNullableFilter;
 
   @ApiProperty({

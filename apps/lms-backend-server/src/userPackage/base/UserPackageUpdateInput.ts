@@ -11,13 +11,24 @@ https://docs.amplication.com/how-to/custom-code
   */
 import { InputType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
-import { PackageModelWhereUniqueInput } from "../../packageModel/base/PackageModelWhereUniqueInput";
-import { ValidateNested, IsOptional, IsDate } from "class-validator";
+import { IsDate, IsOptional, ValidateNested } from "class-validator";
 import { Type } from "class-transformer";
+import { PackageModelWhereUniqueInput } from "../../packageModel/base/PackageModelWhereUniqueInput";
 import { UserWhereUniqueInput } from "../../user/base/UserWhereUniqueInput";
 
 @InputType()
 class UserPackageUpdateInput {
+  @ApiProperty({
+    required: false,
+  })
+  @IsDate()
+  @Type(() => Date)
+  @IsOptional()
+  @Field(() => Date, {
+    nullable: true,
+  })
+  deletedAt?: Date | null;
+
   @ApiProperty({
     required: false,
     type: () => PackageModelWhereUniqueInput,

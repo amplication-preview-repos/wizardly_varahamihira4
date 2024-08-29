@@ -22,6 +22,7 @@ export const TextMaterialList = (props: ListProps): React.ReactElement => {
       <Datagrid rowClick="show">
         <TextField label="content" source="content" />
         <DateField source="createdAt" label="Created At" />
+        <TextField label="deletedAt" source="deletedAt" />
         <TextField label="ID" source="id" />
         <ReferenceField label="lesson" source="lesson.id" reference="Lesson">
           <TextField source={LESSON_TITLE_FIELD} />

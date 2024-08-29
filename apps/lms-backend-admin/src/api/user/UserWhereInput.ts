@@ -1,4 +1,5 @@
 import { AnswerListRelationFilter } from "../answer/AnswerListRelationFilter";
+import { DateTimeNullableFilter } from "../../util/DateTimeNullableFilter";
 import { StringNullableFilter } from "../../util/StringNullableFilter";
 import { StringFilter } from "../../util/StringFilter";
 import { UserPackageListRelationFilter } from "../userPackage/UserPackageListRelationFilter";
@@ -6,6 +7,7 @@ import { UserPracticeResponseListRelationFilter } from "../userPracticeResponse/
 
 export type UserWhereInput = {
   answers?: AnswerListRelationFilter;
+  deletedAt?: DateTimeNullableFilter;
   email?: StringNullableFilter;
   firstName?: StringNullableFilter;
   id?: StringFilter;

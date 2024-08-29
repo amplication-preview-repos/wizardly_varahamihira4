@@ -18,6 +18,7 @@ export const AnswerShow = (props: ShowProps): React.ReactElement => {
     <Show {...props}>
       <SimpleShowLayout>
         <DateField source="createdAt" label="Created At" />
+        <TextField label="deletedAt" source="deletedAt" />
         <TextField label="ID" source="id" />
         <BooleanField label="isCorrect" source="isCorrect" />
         <TextField label="orderNumber" source="orderNumber" />

@@ -49,6 +49,17 @@ class User {
 
   @ApiProperty({
     required: false,
+  })
+  @IsDate()
+  @Type(() => Date)
+  @IsOptional()
+  @Field(() => Date, {
+    nullable: true,
+  })
+  deletedAt!: Date | null;
+
+  @ApiProperty({
+    required: false,
     type: String,
   })
   @IsString()

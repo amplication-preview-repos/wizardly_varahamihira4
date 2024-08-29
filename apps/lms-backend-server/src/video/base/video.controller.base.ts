@@ -40,6 +40,7 @@ export class VideoControllerBase {
       },
       select: {
         createdAt: true,
+        deletedAt: true,
         id: true,
 
         lesson: {
@@ -63,6 +64,7 @@ export class VideoControllerBase {
       ...args,
       select: {
         createdAt: true,
+        deletedAt: true,
         id: true,
 
         lesson: {
@@ -87,6 +89,7 @@ export class VideoControllerBase {
       where: params,
       select: {
         createdAt: true,
+        deletedAt: true,
         id: true,
 
         lesson: {
@@ -128,6 +131,7 @@ export class VideoControllerBase {
         },
         select: {
           createdAt: true,
+          deletedAt: true,
           id: true,
 
           lesson: {
@@ -161,6 +165,7 @@ export class VideoControllerBase {
         where: params,
         select: {
           createdAt: true,
+          deletedAt: true,
           id: true,
 
           lesson: {

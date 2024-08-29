@@ -20,6 +20,7 @@ export const LessonShow = (props: ShowProps): React.ReactElement => {
       <SimpleShowLayout>
         <TextField label="content" source="content" />
         <DateField source="createdAt" label="Created At" />
+        <TextField label="deletedAt" source="deletedAt" />
         <TextField label="ID" source="id" />
         <ReferenceField
           label="package"
@@ -37,6 +38,7 @@ export const LessonShow = (props: ShowProps): React.ReactElement => {
         >
           <Datagrid rowClick="show">
             <DateField source="createdAt" label="Created At" />
+            <TextField label="deletedAt" source="deletedAt" />
             <TextField label="ID" source="id" />
             <ReferenceField
               label="lesson"
@@ -52,6 +54,7 @@ export const LessonShow = (props: ShowProps): React.ReactElement => {
         <ReferenceManyField reference="Test" target="lessonId" label="Tests">
           <Datagrid rowClick="show">
             <DateField source="createdAt" label="Created At" />
+            <TextField label="deletedAt" source="deletedAt" />
             <TextField label="ID" source="id" />
             <ReferenceField
               label="lesson"
@@ -72,6 +75,7 @@ export const LessonShow = (props: ShowProps): React.ReactElement => {
           <Datagrid rowClick="show">
             <TextField label="content" source="content" />
             <DateField source="createdAt" label="Created At" />
+            <TextField label="deletedAt" source="deletedAt" />
             <TextField label="ID" source="id" />
             <ReferenceField
               label="lesson"
@@ -86,6 +90,7 @@ export const LessonShow = (props: ShowProps): React.ReactElement => {
         <ReferenceManyField reference="Video" target="lessonId" label="Videos">
           <Datagrid rowClick="show">
             <DateField source="createdAt" label="Created At" />
+            <TextField label="deletedAt" source="deletedAt" />
             <TextField label="ID" source="id" />
             <ReferenceField
               label="lesson"

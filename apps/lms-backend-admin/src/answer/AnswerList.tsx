@@ -25,6 +25,7 @@ export const AnswerList = (props: ListProps): React.ReactElement => {
     >
       <Datagrid rowClick="show">
         <DateField source="createdAt" label="Created At" />
+        <TextField label="deletedAt" source="deletedAt" />
         <TextField label="ID" source="id" />
         <BooleanField label="isCorrect" source="isCorrect" />
         <TextField label="orderNumber" source="orderNumber" />

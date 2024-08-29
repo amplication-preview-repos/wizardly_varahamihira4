@@ -11,15 +11,27 @@ https://docs.amplication.com/how-to/custom-code
   */
 import { InputType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
-import { StringNullableFilter } from "../../util/StringNullableFilter";
+import { DateTimeNullableFilter } from "../../util/DateTimeNullableFilter";
 import { Type } from "class-transformer";
 import { IsOptional, ValidateNested } from "class-validator";
+import { StringNullableFilter } from "../../util/StringNullableFilter";
 import { StringFilter } from "../../util/StringFilter";
 import { PackageModelListRelationFilter } from "../../packageModel/base/PackageModelListRelationFilter";
 import { FloatNullableFilter } from "../../util/FloatNullableFilter";
 
 @InputType()
 class CourseWhereInput {
+  @ApiProperty({
+    required: false,
+    type: DateTimeNullableFilter,
+  })
+  @Type(() => DateTimeNullableFilter)
+  @IsOptional()
+  @Field(() => DateTimeNullableFilter, {
+    nullable: true,
+  })
+  deletedAt?: DateTimeNullableFilter;
+
   @ApiProperty({
     required: false,
     type: StringNullableFilter,

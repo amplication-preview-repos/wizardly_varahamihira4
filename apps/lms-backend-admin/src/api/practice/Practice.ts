@@ -3,6 +3,7 @@ import { UserPracticeResponse } from "../userPracticeResponse/UserPracticeRespon
 
 export type Practice = {
   createdAt: Date;
+  deletedAt: Date | null;
   id: string;
   lesson?: Lesson | null;
   textTask: string | null;

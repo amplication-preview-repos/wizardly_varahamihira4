@@ -3,9 +3,9 @@ import {
   Edit,
   SimpleForm,
   EditProps,
+  DateTimeInput,
   ReferenceInput,
   SelectInput,
-  DateTimeInput,
 } from "react-admin";
 import { PackageModelTitle } from "../packageModel/PackageModelTitle";
 import { UserTitle } from "../user/UserTitle";
@@ -14,6 +14,7 @@ export const UserPackageEdit = (props: EditProps): React.ReactElement => {
   return (
     <Edit {...props}>
       <SimpleForm>
+        <DateTimeInput label="deletedAt" source="deletedAt" />
         <ReferenceInput
           source="packageField.id"
           reference="PackageModel"

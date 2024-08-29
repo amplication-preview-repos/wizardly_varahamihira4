@@ -15,6 +15,7 @@ import { AnswerCreateNestedManyWithoutUsersInput } from "./AnswerCreateNestedMan
 import {
   ValidateNested,
   IsOptional,
+  IsDate,
   IsString,
   MaxLength,
   IsEnum,
@@ -40,6 +41,17 @@ class UserCreateInput {
     nullable: true,
   })
   answers?: AnswerCreateNestedManyWithoutUsersInput;
+
+  @ApiProperty({
+    required: false,
+  })
+  @IsDate()
+  @Type(() => Date)
+  @IsOptional()
+  @Field(() => Date, {
+    nullable: true,
+  })
+  deletedAt?: Date | null;
 
   @ApiProperty({
     required: false,

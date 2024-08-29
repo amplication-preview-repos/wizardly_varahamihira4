@@ -22,6 +22,7 @@ export const UserShow = (props: ShowProps): React.ReactElement => {
     <Show {...props}>
       <SimpleShowLayout>
         <DateField source="createdAt" label="Created At" />
+        <TextField label="deletedAt" source="deletedAt" />
         <TextField label="Email" source="email" />
         <TextField label="First Name" source="firstName" />
         <TextField label="ID" source="id" />
@@ -33,6 +34,7 @@ export const UserShow = (props: ShowProps): React.ReactElement => {
         <ReferenceManyField reference="Answer" target="userId" label="Answers">
           <Datagrid rowClick="show">
             <DateField source="createdAt" label="Created At" />
+            <TextField label="deletedAt" source="deletedAt" />
             <TextField label="ID" source="id" />
             <BooleanField label="isCorrect" source="isCorrect" />
             <TextField label="orderNumber" source="orderNumber" />
@@ -54,6 +56,7 @@ export const UserShow = (props: ShowProps): React.ReactElement => {
         >
           <Datagrid rowClick="show">
             <DateField source="createdAt" label="Created At" />
+            <TextField label="deletedAt" source="deletedAt" />
             <TextField label="ID" source="id" />
             <ReferenceField
               label="package"
@@ -76,6 +79,7 @@ export const UserShow = (props: ShowProps): React.ReactElement => {
         >
           <Datagrid rowClick="show">
             <DateField source="createdAt" label="Created At" />
+            <TextField label="deletedAt" source="deletedAt" />
             <TextField label="ID" source="id" />
             <ReferenceField
               label="practice"

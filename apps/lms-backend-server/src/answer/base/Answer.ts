@@ -13,9 +13,9 @@ import { ObjectType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
 import {
   IsDate,
+  IsOptional,
   IsString,
   IsBoolean,
-  IsOptional,
   IsInt,
   Min,
   Max,
@@ -37,6 +37,17 @@ class Answer {
   @Type(() => Date)
   @Field(() => Date)
   createdAt!: Date;
+
+  @ApiProperty({
+    required: false,
+  })
+  @IsDate()
+  @Type(() => Date)
+  @IsOptional()
+  @Field(() => Date, {
+    nullable: true,
+  })
+  deletedAt!: Date | null;
 
   @ApiProperty({
     required: true,

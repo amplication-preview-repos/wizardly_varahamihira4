@@ -4,9 +4,9 @@ import {
   Create,
   SimpleForm,
   CreateProps,
+  DateTimeInput,
   ReferenceInput,
   SelectInput,
-  DateTimeInput,
 } from "react-admin";
 
 import { PackageModelTitle } from "../packageModel/PackageModelTitle";
@@ -16,6 +16,7 @@ export const UserPackageCreate = (props: CreateProps): React.ReactElement => {
   return (
     <Create {...props}>
       <SimpleForm>
+        <DateTimeInput label="deletedAt" source="deletedAt" />
         <ReferenceInput
           source="packageField.id"
           reference="PackageModel"

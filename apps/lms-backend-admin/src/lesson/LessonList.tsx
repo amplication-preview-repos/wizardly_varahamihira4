@@ -22,6 +22,7 @@ export const LessonList = (props: ListProps): React.ReactElement => {
       <Datagrid rowClick="show">
         <TextField label="content" source="content" />
         <DateField source="createdAt" label="Created At" />
+        <TextField label="deletedAt" source="deletedAt" />
         <TextField label="ID" source="id" />
         <ReferenceField
           label="package"

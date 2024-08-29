@@ -6,6 +6,7 @@ import { VideoUpdateManyWithoutLessonsInput } from "./VideoUpdateManyWithoutLess
 
 export type LessonUpdateInput = {
   content?: string | null;
+  deletedAt?: Date | null;
   packageField?: PackageModelWhereUniqueInput | null;
   practices?: PracticeUpdateManyWithoutLessonsInput;
   tests?: TestUpdateManyWithoutLessonsInput;

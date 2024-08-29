@@ -11,7 +11,8 @@ https://docs.amplication.com/how-to/custom-code
   */
 import { InputType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
-import { IsString, MaxLength, IsOptional } from "class-validator";
+import { IsString, MaxLength, IsOptional, IsDate } from "class-validator";
+import { Type } from "class-transformer";
 
 @InputType()
 class LocaleUpdateInput {
@@ -26,6 +27,17 @@ class LocaleUpdateInput {
     nullable: true,
   })
   code?: string | null;
+
+  @ApiProperty({
+    required: false,
+  })
+  @IsDate()
+  @Type(() => Date)
+  @IsOptional()
+  @Field(() => Date, {
+    nullable: true,
+  })
+  deletedAt?: Date | null;
 
   @ApiProperty({
     required: false,

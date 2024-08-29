@@ -54,6 +54,7 @@ export class PackageModelControllerBase {
         },
 
         createdAt: true,
+        deletedAt: true,
         endDate: true,
         homeworkCheckEndDate: true,
         id: true,
@@ -80,6 +81,7 @@ export class PackageModelControllerBase {
         },
 
         createdAt: true,
+        deletedAt: true,
         endDate: true,
         homeworkCheckEndDate: true,
         id: true,
@@ -107,6 +109,7 @@ export class PackageModelControllerBase {
         },
 
         createdAt: true,
+        deletedAt: true,
         endDate: true,
         homeworkCheckEndDate: true,
         id: true,
@@ -151,6 +154,7 @@ export class PackageModelControllerBase {
           },
 
           createdAt: true,
+          deletedAt: true,
           endDate: true,
           homeworkCheckEndDate: true,
           id: true,
@@ -187,6 +191,7 @@ export class PackageModelControllerBase {
           },
 
           createdAt: true,
+          deletedAt: true,
           endDate: true,
           homeworkCheckEndDate: true,
           id: true,
@@ -218,6 +223,7 @@ export class PackageModelControllerBase {
       select: {
         content: true,
         createdAt: true,
+        deletedAt: true,
         id: true,
 
         packageField: {
@@ -300,6 +306,7 @@ export class PackageModelControllerBase {
       ...query,
       select: {
         createdAt: true,
+        deletedAt: true,
         id: true,
 
         packageField: {

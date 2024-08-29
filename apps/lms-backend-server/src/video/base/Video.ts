@@ -13,9 +13,9 @@ import { ObjectType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
 import {
   IsDate,
+  IsOptional,
   IsString,
   ValidateNested,
-  IsOptional,
   MaxLength,
 } from "class-validator";
 import { Type } from "class-transformer";
@@ -30,6 +30,17 @@ class Video {
   @Type(() => Date)
   @Field(() => Date)
   createdAt!: Date;
+
+  @ApiProperty({
+    required: false,
+  })
+  @IsDate()
+  @Type(() => Date)
+  @IsOptional()
+  @Field(() => Date, {
+    nullable: true,
+  })
+  deletedAt!: Date | null;
 
   @ApiProperty({
     required: true,

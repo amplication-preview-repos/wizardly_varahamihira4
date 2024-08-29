@@ -35,6 +35,7 @@ export class CourseControllerBase {
       data: data,
       select: {
         createdAt: true,
+        deletedAt: true,
         description: true,
         id: true,
         language: true,
@@ -54,6 +55,7 @@ export class CourseControllerBase {
       ...args,
       select: {
         createdAt: true,
+        deletedAt: true,
         description: true,
         id: true,
         language: true,
@@ -74,6 +76,7 @@ export class CourseControllerBase {
       where: params,
       select: {
         createdAt: true,
+        deletedAt: true,
         description: true,
         id: true,
         language: true,
@@ -103,6 +106,7 @@ export class CourseControllerBase {
         data: data,
         select: {
           createdAt: true,
+          deletedAt: true,
           description: true,
           id: true,
           language: true,
@@ -132,6 +136,7 @@ export class CourseControllerBase {
         where: params,
         select: {
           createdAt: true,
+          deletedAt: true,
           description: true,
           id: true,
           language: true,
@@ -167,6 +172,7 @@ export class CourseControllerBase {
         },
 
         createdAt: true,
+        deletedAt: true,
         endDate: true,
         homeworkCheckEndDate: true,
         id: true,

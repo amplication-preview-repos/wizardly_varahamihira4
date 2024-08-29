@@ -4,6 +4,7 @@ import { UserPackageUpdateManyWithoutPackageModelsInput } from "./UserPackageUpd
 
 export type PackageModelUpdateInput = {
   course?: CourseWhereUniqueInput | null;
+  deletedAt?: Date | null;
   endDate?: Date | null;
   homeworkCheckEndDate?: Date | null;
   lessons?: LessonUpdateManyWithoutPackageModelsInput;

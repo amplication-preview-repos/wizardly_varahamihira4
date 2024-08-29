@@ -6,6 +6,7 @@ import { UserPracticeResponse } from "../userPracticeResponse/UserPracticeRespon
 export type User = {
   answers?: Array<Answer>;
   createdAt: Date;
+  deletedAt: Date | null;
   email: string | null;
   firstName: string | null;
   id: string;

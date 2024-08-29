@@ -1,6 +1,7 @@
 import { PackageModelUpdateManyWithoutCoursesInput } from "./PackageModelUpdateManyWithoutCoursesInput";
 
 export type CourseUpdateInput = {
+  deletedAt?: Date | null;
   description?: string | null;
   language?: string | null;
   packages?: PackageModelUpdateManyWithoutCoursesInput;

@@ -1,12 +1,15 @@
 import * as React from "react";
+
 import {
   Edit,
   SimpleForm,
   EditProps,
+  DateTimeInput,
   ReferenceInput,
   SelectInput,
   TextInput,
 } from "react-admin";
+
 import { PracticeTitle } from "../practice/PracticeTitle";
 import { UserTitle } from "../user/UserTitle";
 
@@ -16,6 +19,7 @@ export const UserPracticeResponseEdit = (
   return (
     <Edit {...props}>
       <SimpleForm>
+        <DateTimeInput label="deletedAt" source="deletedAt" />
         <ReferenceInput
           source="practice.id"
           reference="Practice"

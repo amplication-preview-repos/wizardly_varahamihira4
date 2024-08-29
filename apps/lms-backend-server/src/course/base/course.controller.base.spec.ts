@@ -19,6 +19,7 @@ const nonExistingId = "nonExistingId";
 const existingId = "existingId";
 const CREATE_INPUT = {
   createdAt: new Date(),
+  deletedAt: new Date(),
   description: "exampleDescription",
   id: "exampleId",
   language: "exampleLanguage",
@@ -28,6 +29,7 @@ const CREATE_INPUT = {
 };
 const CREATE_RESULT = {
   createdAt: new Date(),
+  deletedAt: new Date(),
   description: "exampleDescription",
   id: "exampleId",
   language: "exampleLanguage",
@@ -38,6 +40,7 @@ const CREATE_RESULT = {
 const FIND_MANY_RESULT = [
   {
     createdAt: new Date(),
+    deletedAt: new Date(),
     description: "exampleDescription",
     id: "exampleId",
     language: "exampleLanguage",
@@ -48,6 +51,7 @@ const FIND_MANY_RESULT = [
 ];
 const FIND_ONE_RESULT = {
   createdAt: new Date(),
+  deletedAt: new Date(),
   description: "exampleDescription",
   id: "exampleId",
   language: "exampleLanguage",
@@ -139,6 +143,7 @@ describe("Course", () => {
       .expect({
         ...CREATE_RESULT,
         createdAt: CREATE_RESULT.createdAt.toISOString(),
+        deletedAt: CREATE_RESULT.deletedAt.toISOString(),
         updatedAt: CREATE_RESULT.updatedAt.toISOString(),
       });
   });
@@ -151,6 +156,7 @@ describe("Course", () => {
         {
           ...FIND_MANY_RESULT[0],
           createdAt: FIND_MANY_RESULT[0].createdAt.toISOString(),
+          deletedAt: FIND_MANY_RESULT[0].deletedAt.toISOString(),
           updatedAt: FIND_MANY_RESULT[0].updatedAt.toISOString(),
         },
       ]);
@@ -174,6 +180,7 @@ describe("Course", () => {
       .expect({
         ...FIND_ONE_RESULT,
         createdAt: FIND_ONE_RESULT.createdAt.toISOString(),
+        deletedAt: FIND_ONE_RESULT.deletedAt.toISOString(),
         updatedAt: FIND_ONE_RESULT.updatedAt.toISOString(),
       });
   });
@@ -187,6 +194,7 @@ describe("Course", () => {
       .expect({
         ...CREATE_RESULT,
         createdAt: CREATE_RESULT.createdAt.toISOString(),
+        deletedAt: CREATE_RESULT.deletedAt.toISOString(),
         updatedAt: CREATE_RESULT.updatedAt.toISOString(),
       })
       .then(function () {

@@ -8,6 +8,7 @@ import { UserPackageListRelationFilter } from "../userPackage/UserPackageListRel
 
 export type PackageModelWhereInput = {
   course?: CourseWhereUniqueInput;
+  deletedAt?: DateTimeNullableFilter;
   endDate?: DateTimeNullableFilter;
   homeworkCheckEndDate?: DateTimeNullableFilter;
   id?: StringFilter;

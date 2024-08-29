@@ -7,6 +7,7 @@ import { Video } from "../video/Video";
 export type Lesson = {
   content: string | null;
   createdAt: Date;
+  deletedAt: Date | null;
   id: string;
   packageField?: PackageModel | null;
   practices?: Array<Practice>;

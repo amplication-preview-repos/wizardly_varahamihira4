@@ -15,6 +15,7 @@ import { AnswerUpdateManyWithoutUsersInput } from "./AnswerUpdateManyWithoutUser
 import {
   ValidateNested,
   IsOptional,
+  IsDate,
   IsString,
   MaxLength,
   IsEnum,
@@ -40,6 +41,17 @@ class UserUpdateInput {
     nullable: true,
   })
   answers?: AnswerUpdateManyWithoutUsersInput;
+
+  @ApiProperty({
+    required: false,
+  })
+  @IsDate()
+  @Type(() => Date)
+  @IsOptional()
+  @Field(() => Date, {
+    nullable: true,
+  })
+  deletedAt?: Date | null;
 
   @ApiProperty({
     required: false,

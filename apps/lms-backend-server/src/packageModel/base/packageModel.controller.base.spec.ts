@@ -19,6 +19,7 @@ const nonExistingId = "nonExistingId";
 const existingId = "existingId";
 const CREATE_INPUT = {
   createdAt: new Date(),
+  deletedAt: new Date(),
   endDate: new Date(),
   homeworkCheckEndDate: new Date(),
   id: "exampleId",
@@ -29,6 +30,7 @@ const CREATE_INPUT = {
 };
 const CREATE_RESULT = {
   createdAt: new Date(),
+  deletedAt: new Date(),
   endDate: new Date(),
   homeworkCheckEndDate: new Date(),
   id: "exampleId",
@@ -40,6 +42,7 @@ const CREATE_RESULT = {
 const FIND_MANY_RESULT = [
   {
     createdAt: new Date(),
+    deletedAt: new Date(),
     endDate: new Date(),
     homeworkCheckEndDate: new Date(),
     id: "exampleId",
@@ -51,6 +54,7 @@ const FIND_MANY_RESULT = [
 ];
 const FIND_ONE_RESULT = {
   createdAt: new Date(),
+  deletedAt: new Date(),
   endDate: new Date(),
   homeworkCheckEndDate: new Date(),
   id: "exampleId",
@@ -143,6 +147,7 @@ describe("PackageModel", () => {
       .expect({
         ...CREATE_RESULT,
         createdAt: CREATE_RESULT.createdAt.toISOString(),
+        deletedAt: CREATE_RESULT.deletedAt.toISOString(),
         endDate: CREATE_RESULT.endDate.toISOString(),
         homeworkCheckEndDate: CREATE_RESULT.homeworkCheckEndDate.toISOString(),
         startDate: CREATE_RESULT.startDate.toISOString(),
@@ -158,6 +163,7 @@ describe("PackageModel", () => {
         {
           ...FIND_MANY_RESULT[0],
           createdAt: FIND_MANY_RESULT[0].createdAt.toISOString(),
+          deletedAt: FIND_MANY_RESULT[0].deletedAt.toISOString(),
           endDate: FIND_MANY_RESULT[0].endDate.toISOString(),
           homeworkCheckEndDate:
             FIND_MANY_RESULT[0].homeworkCheckEndDate.toISOString(),
@@ -185,6 +191,7 @@ describe("PackageModel", () => {
       .expect({
         ...FIND_ONE_RESULT,
         createdAt: FIND_ONE_RESULT.createdAt.toISOString(),
+        deletedAt: FIND_ONE_RESULT.deletedAt.toISOString(),
         endDate: FIND_ONE_RESULT.endDate.toISOString(),
         homeworkCheckEndDate:
           FIND_ONE_RESULT.homeworkCheckEndDate.toISOString(),
@@ -202,6 +209,7 @@ describe("PackageModel", () => {
       .expect({
         ...CREATE_RESULT,
         createdAt: CREATE_RESULT.createdAt.toISOString(),
+        deletedAt: CREATE_RESULT.deletedAt.toISOString(),
         endDate: CREATE_RESULT.endDate.toISOString(),
         homeworkCheckEndDate: CREATE_RESULT.homeworkCheckEndDate.toISOString(),
         startDate: CREATE_RESULT.startDate.toISOString(),

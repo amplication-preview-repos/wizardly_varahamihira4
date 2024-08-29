@@ -24,6 +24,7 @@ export const UserPracticeResponseList = (
     >
       <Datagrid rowClick="show">
         <DateField source="createdAt" label="Created At" />
+        <TextField label="deletedAt" source="deletedAt" />
         <TextField label="ID" source="id" />
         <ReferenceField
           label="practice"

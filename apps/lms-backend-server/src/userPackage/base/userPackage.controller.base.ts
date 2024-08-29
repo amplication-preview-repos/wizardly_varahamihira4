@@ -48,6 +48,7 @@ export class UserPackageControllerBase {
       },
       select: {
         createdAt: true,
+        deletedAt: true,
         id: true,
 
         packageField: {
@@ -77,6 +78,7 @@ export class UserPackageControllerBase {
       ...args,
       select: {
         createdAt: true,
+        deletedAt: true,
         id: true,
 
         packageField: {
@@ -107,6 +109,7 @@ export class UserPackageControllerBase {
       where: params,
       select: {
         createdAt: true,
+        deletedAt: true,
         id: true,
 
         packageField: {
@@ -160,6 +163,7 @@ export class UserPackageControllerBase {
         },
         select: {
           createdAt: true,
+          deletedAt: true,
           id: true,
 
           packageField: {
@@ -199,6 +203,7 @@ export class UserPackageControllerBase {
         where: params,
         select: {
           createdAt: true,
+          deletedAt: true,
           id: true,
 
           packageField: {

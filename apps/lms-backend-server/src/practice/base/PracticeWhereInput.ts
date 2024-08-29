@@ -11,15 +11,27 @@ https://docs.amplication.com/how-to/custom-code
   */
 import { InputType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
-import { StringFilter } from "../../util/StringFilter";
+import { DateTimeNullableFilter } from "../../util/DateTimeNullableFilter";
 import { Type } from "class-transformer";
 import { IsOptional, ValidateNested } from "class-validator";
+import { StringFilter } from "../../util/StringFilter";
 import { LessonWhereUniqueInput } from "../../lesson/base/LessonWhereUniqueInput";
 import { StringNullableFilter } from "../../util/StringNullableFilter";
 import { UserPracticeResponseListRelationFilter } from "../../userPracticeResponse/base/UserPracticeResponseListRelationFilter";
 
 @InputType()
 class PracticeWhereInput {
+  @ApiProperty({
+    required: false,
+    type: DateTimeNullableFilter,
+  })
+  @Type(() => DateTimeNullableFilter)
+  @IsOptional()
+  @Field(() => DateTimeNullableFilter, {
+    nullable: true,
+  })
+  deletedAt?: DateTimeNullableFilter;
+
   @ApiProperty({
     required: false,
     type: StringFilter,

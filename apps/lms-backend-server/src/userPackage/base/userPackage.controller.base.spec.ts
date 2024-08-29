@@ -19,12 +19,14 @@ const nonExistingId = "nonExistingId";
 const existingId = "existingId";
 const CREATE_INPUT = {
   createdAt: new Date(),
+  deletedAt: new Date(),
   id: "exampleId",
   purchaseDate: new Date(),
   updatedAt: new Date(),
 };
 const CREATE_RESULT = {
   createdAt: new Date(),
+  deletedAt: new Date(),
   id: "exampleId",
   purchaseDate: new Date(),
   updatedAt: new Date(),
@@ -32,6 +34,7 @@ const CREATE_RESULT = {
 const FIND_MANY_RESULT = [
   {
     createdAt: new Date(),
+    deletedAt: new Date(),
     id: "exampleId",
     purchaseDate: new Date(),
     updatedAt: new Date(),
@@ -39,6 +42,7 @@ const FIND_MANY_RESULT = [
 ];
 const FIND_ONE_RESULT = {
   createdAt: new Date(),
+  deletedAt: new Date(),
   id: "exampleId",
   purchaseDate: new Date(),
   updatedAt: new Date(),
@@ -127,6 +131,7 @@ describe("UserPackage", () => {
       .expect({
         ...CREATE_RESULT,
         createdAt: CREATE_RESULT.createdAt.toISOString(),
+        deletedAt: CREATE_RESULT.deletedAt.toISOString(),
         purchaseDate: CREATE_RESULT.purchaseDate.toISOString(),
         updatedAt: CREATE_RESULT.updatedAt.toISOString(),
       });
@@ -140,6 +145,7 @@ describe("UserPackage", () => {
         {
           ...FIND_MANY_RESULT[0],
           createdAt: FIND_MANY_RESULT[0].createdAt.toISOString(),
+          deletedAt: FIND_MANY_RESULT[0].deletedAt.toISOString(),
           purchaseDate: FIND_MANY_RESULT[0].purchaseDate.toISOString(),
           updatedAt: FIND_MANY_RESULT[0].updatedAt.toISOString(),
         },
@@ -164,6 +170,7 @@ describe("UserPackage", () => {
       .expect({
         ...FIND_ONE_RESULT,
         createdAt: FIND_ONE_RESULT.createdAt.toISOString(),
+        deletedAt: FIND_ONE_RESULT.deletedAt.toISOString(),
         purchaseDate: FIND_ONE_RESULT.purchaseDate.toISOString(),
         updatedAt: FIND_ONE_RESULT.updatedAt.toISOString(),
       });
@@ -178,6 +185,7 @@ describe("UserPackage", () => {
       .expect({
         ...CREATE_RESULT,
         createdAt: CREATE_RESULT.createdAt.toISOString(),
+        deletedAt: CREATE_RESULT.deletedAt.toISOString(),
         purchaseDate: CREATE_RESULT.purchaseDate.toISOString(),
         updatedAt: CREATE_RESULT.updatedAt.toISOString(),
       })

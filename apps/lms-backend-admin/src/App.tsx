@@ -13,10 +13,10 @@ import { PackageModelList } from "./packageModel/PackageModelList";
 import { PackageModelCreate } from "./packageModel/PackageModelCreate";
 import { PackageModelEdit } from "./packageModel/PackageModelEdit";
 import { PackageModelShow } from "./packageModel/PackageModelShow";
-import { VideoList } from "./video/VideoList";
-import { VideoCreate } from "./video/VideoCreate";
-import { VideoEdit } from "./video/VideoEdit";
-import { VideoShow } from "./video/VideoShow";
+import { TestList } from "./test/TestList";
+import { TestCreate } from "./test/TestCreate";
+import { TestEdit } from "./test/TestEdit";
+import { TestShow } from "./test/TestShow";
 import { LocaleList } from "./locale/LocaleList";
 import { LocaleCreate } from "./locale/LocaleCreate";
 import { LocaleEdit } from "./locale/LocaleEdit";
@@ -29,22 +29,22 @@ import { LessonList } from "./lesson/LessonList";
 import { LessonCreate } from "./lesson/LessonCreate";
 import { LessonEdit } from "./lesson/LessonEdit";
 import { LessonShow } from "./lesson/LessonShow";
-import { TestList } from "./test/TestList";
-import { TestCreate } from "./test/TestCreate";
-import { TestEdit } from "./test/TestEdit";
-import { TestShow } from "./test/TestShow";
-import { PracticeList } from "./practice/PracticeList";
-import { PracticeCreate } from "./practice/PracticeCreate";
-import { PracticeEdit } from "./practice/PracticeEdit";
-import { PracticeShow } from "./practice/PracticeShow";
-import { UserPackageList } from "./userPackage/UserPackageList";
-import { UserPackageCreate } from "./userPackage/UserPackageCreate";
-import { UserPackageEdit } from "./userPackage/UserPackageEdit";
-import { UserPackageShow } from "./userPackage/UserPackageShow";
+import { VideoList } from "./video/VideoList";
+import { VideoCreate } from "./video/VideoCreate";
+import { VideoEdit } from "./video/VideoEdit";
+import { VideoShow } from "./video/VideoShow";
 import { AnswerList } from "./answer/AnswerList";
 import { AnswerCreate } from "./answer/AnswerCreate";
 import { AnswerEdit } from "./answer/AnswerEdit";
 import { AnswerShow } from "./answer/AnswerShow";
+import { UserPackageList } from "./userPackage/UserPackageList";
+import { UserPackageCreate } from "./userPackage/UserPackageCreate";
+import { UserPackageEdit } from "./userPackage/UserPackageEdit";
+import { UserPackageShow } from "./userPackage/UserPackageShow";
+import { PracticeList } from "./practice/PracticeList";
+import { PracticeCreate } from "./practice/PracticeCreate";
+import { PracticeEdit } from "./practice/PracticeEdit";
+import { PracticeShow } from "./practice/PracticeShow";
 import { UserList } from "./user/UserList";
 import { UserCreate } from "./user/UserCreate";
 import { UserEdit } from "./user/UserEdit";
@@ -94,11 +94,11 @@ const App = (): React.ReactElement => {
           show={PackageModelShow}
         />
         <Resource
-          name="Video"
-          list={VideoList}
-          edit={VideoEdit}
-          create={VideoCreate}
-          show={VideoShow}
+          name="Test"
+          list={TestList}
+          edit={TestEdit}
+          create={TestCreate}
+          show={TestShow}
         />
         <Resource
           name="Locale"
@@ -122,18 +122,18 @@ const App = (): React.ReactElement => {
           show={LessonShow}
         />
         <Resource
-          name="Test"
-          list={TestList}
-          edit={TestEdit}
-          create={TestCreate}
-          show={TestShow}
+          name="Video"
+          list={VideoList}
+          edit={VideoEdit}
+          create={VideoCreate}
+          show={VideoShow}
         />
         <Resource
-          name="Practice"
-          list={PracticeList}
-          edit={PracticeEdit}
-          create={PracticeCreate}
-          show={PracticeShow}
+          name="Answer"
+          list={AnswerList}
+          edit={AnswerEdit}
+          create={AnswerCreate}
+          show={AnswerShow}
         />
         <Resource
           name="UserPackage"
@@ -143,11 +143,11 @@ const App = (): React.ReactElement => {
           show={UserPackageShow}
         />
         <Resource
-          name="Answer"
-          list={AnswerList}
-          edit={AnswerEdit}
-          create={AnswerCreate}
-          show={AnswerShow}
+          name="Practice"
+          list={PracticeList}
+          edit={PracticeEdit}
+          create={PracticeCreate}
+          show={PracticeShow}
         />
         <Resource
           name="User"

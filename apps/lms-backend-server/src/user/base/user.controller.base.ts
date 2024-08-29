@@ -41,6 +41,7 @@ export class UserControllerBase {
       data: data,
       select: {
         createdAt: true,
+        deletedAt: true,
         email: true,
         firstName: true,
         id: true,
@@ -62,6 +63,7 @@ export class UserControllerBase {
       ...args,
       select: {
         createdAt: true,
+        deletedAt: true,
         email: true,
         firstName: true,
         id: true,
@@ -84,6 +86,7 @@ export class UserControllerBase {
       where: params,
       select: {
         createdAt: true,
+        deletedAt: true,
         email: true,
         firstName: true,
         id: true,
@@ -115,6 +118,7 @@ export class UserControllerBase {
         data: data,
         select: {
           createdAt: true,
+          deletedAt: true,
           email: true,
           firstName: true,
           id: true,
@@ -146,6 +150,7 @@ export class UserControllerBase {
         where: params,
         select: {
           createdAt: true,
+          deletedAt: true,
           email: true,
           firstName: true,
           id: true,
@@ -177,6 +182,7 @@ export class UserControllerBase {
       ...query,
       select: {
         createdAt: true,
+        deletedAt: true,
         id: true,
         isCorrect: true,
         orderNumber: true,
@@ -268,6 +274,7 @@ export class UserControllerBase {
       ...query,
       select: {
         createdAt: true,
+        deletedAt: true,
         id: true,
 
         packageField: {
@@ -356,6 +363,7 @@ export class UserControllerBase {
       ...query,
       select: {
         createdAt: true,
+        deletedAt: true,
         id: true,
 
         practice: {

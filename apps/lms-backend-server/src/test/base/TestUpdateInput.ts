@@ -12,7 +12,7 @@ https://docs.amplication.com/how-to/custom-code
 import { InputType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
 import { AnswerUpdateManyWithoutTestsInput } from "./AnswerUpdateManyWithoutTestsInput";
-import { ValidateNested, IsOptional } from "class-validator";
+import { ValidateNested, IsOptional, IsDate } from "class-validator";
 import { Type } from "class-transformer";
 import { LessonWhereUniqueInput } from "../../lesson/base/LessonWhereUniqueInput";
 import { IsJSONValue } from "../../validators";
@@ -32,6 +32,17 @@ class TestUpdateInput {
     nullable: true,
   })
   answers?: AnswerUpdateManyWithoutTestsInput;
+
+  @ApiProperty({
+    required: false,
+  })
+  @IsDate()
+  @Type(() => Date)
+  @IsOptional()
+  @Field(() => Date, {
+    nullable: true,
+  })
+  deletedAt?: Date | null;
 
   @ApiProperty({
     required: false,

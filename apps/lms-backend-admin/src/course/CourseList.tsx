@@ -13,6 +13,7 @@ export const CourseList = (props: ListProps): React.ReactElement => {
     >
       <Datagrid rowClick="show">
         <DateField source="createdAt" label="Created At" />
+        <TextField label="deletedAt" source="deletedAt" />
         <TextField label="description" source="description" />
         <TextField label="ID" source="id" />
         <TextField label="language" source="language" />

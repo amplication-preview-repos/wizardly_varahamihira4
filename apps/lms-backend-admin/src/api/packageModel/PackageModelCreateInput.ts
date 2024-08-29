@@ -4,6 +4,7 @@ import { UserPackageCreateNestedManyWithoutPackageModelsInput } from "./UserPack
 
 export type PackageModelCreateInput = {
   course?: CourseWhereUniqueInput | null;
+  deletedAt?: Date | null;
   endDate?: Date | null;
   homeworkCheckEndDate?: Date | null;
   lessons?: LessonCreateNestedManyWithoutPackageModelsInput;

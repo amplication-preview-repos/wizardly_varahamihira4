@@ -6,6 +6,7 @@ import { VideoCreateNestedManyWithoutLessonsInput } from "./VideoCreateNestedMan
 
 export type LessonCreateInput = {
   content?: string | null;
+  deletedAt?: Date | null;
   packageField?: PackageModelWhereUniqueInput | null;
   practices?: PracticeCreateNestedManyWithoutLessonsInput;
   tests?: TestCreateNestedManyWithoutLessonsInput;

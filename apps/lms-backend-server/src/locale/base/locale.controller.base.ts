@@ -33,6 +33,7 @@ export class LocaleControllerBase {
       select: {
         code: true,
         createdAt: true,
+        deletedAt: true,
         id: true,
         name: true,
         updatedAt: true,
@@ -50,6 +51,7 @@ export class LocaleControllerBase {
       select: {
         code: true,
         createdAt: true,
+        deletedAt: true,
         id: true,
         name: true,
         updatedAt: true,
@@ -68,6 +70,7 @@ export class LocaleControllerBase {
       select: {
         code: true,
         createdAt: true,
+        deletedAt: true,
         id: true,
         name: true,
         updatedAt: true,
@@ -95,6 +98,7 @@ export class LocaleControllerBase {
         select: {
           code: true,
           createdAt: true,
+          deletedAt: true,
           id: true,
           name: true,
           updatedAt: true,
@@ -122,6 +126,7 @@ export class LocaleControllerBase {
         select: {
           code: true,
           createdAt: true,
+          deletedAt: true,
           id: true,
           name: true,
           updatedAt: true,

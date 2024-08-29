@@ -14,9 +14,9 @@ import { ApiProperty } from "@nestjs/swagger";
 
 import {
   IsDate,
+  IsOptional,
   IsString,
   MaxLength,
-  IsOptional,
   ValidateNested,
   IsNumber,
   Min,
@@ -35,6 +35,17 @@ class Course {
   @Type(() => Date)
   @Field(() => Date)
   createdAt!: Date;
+
+  @ApiProperty({
+    required: false,
+  })
+  @IsDate()
+  @Type(() => Date)
+  @IsOptional()
+  @Field(() => Date, {
+    nullable: true,
+  })
+  deletedAt!: Date | null;
 
   @ApiProperty({
     required: false,

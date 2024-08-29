@@ -4,6 +4,7 @@ import {
   Edit,
   SimpleForm,
   EditProps,
+  DateTimeInput,
   BooleanInput,
   NumberInput,
   ReferenceInput,
@@ -17,6 +18,7 @@ export const AnswerEdit = (props: EditProps): React.ReactElement => {
   return (
     <Edit {...props}>
       <SimpleForm>
+        <DateTimeInput label="deletedAt" source="deletedAt" />
         <BooleanInput label="isCorrect" source="isCorrect" />
         <NumberInput step={1} label="orderNumber" source="orderNumber" />
         <div />

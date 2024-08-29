@@ -15,10 +15,11 @@ import {
   IsString,
   MaxLength,
   IsOptional,
+  IsDate,
   ValidateNested,
 } from "class-validator";
-import { PackageModelWhereUniqueInput } from "../../packageModel/base/PackageModelWhereUniqueInput";
 import { Type } from "class-transformer";
+import { PackageModelWhereUniqueInput } from "../../packageModel/base/PackageModelWhereUniqueInput";
 import { PracticeCreateNestedManyWithoutLessonsInput } from "./PracticeCreateNestedManyWithoutLessonsInput";
 import { TestCreateNestedManyWithoutLessonsInput } from "./TestCreateNestedManyWithoutLessonsInput";
 import { TextMaterialCreateNestedManyWithoutLessonsInput } from "./TextMaterialCreateNestedManyWithoutLessonsInput";
@@ -37,6 +38,17 @@ class LessonCreateInput {
     nullable: true,
   })
   content?: string | null;
+
+  @ApiProperty({
+    required: false,
+  })
+  @IsDate()
+  @Type(() => Date)
+  @IsOptional()
+  @Field(() => Date, {
+    nullable: true,
+  })
+  deletedAt?: Date | null;
 
   @ApiProperty({
     required: false,

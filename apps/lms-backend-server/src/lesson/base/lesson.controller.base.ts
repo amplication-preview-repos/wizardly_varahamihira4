@@ -53,6 +53,7 @@ export class LessonControllerBase {
       select: {
         content: true,
         createdAt: true,
+        deletedAt: true,
         id: true,
 
         packageField: {
@@ -77,6 +78,7 @@ export class LessonControllerBase {
       select: {
         content: true,
         createdAt: true,
+        deletedAt: true,
         id: true,
 
         packageField: {
@@ -102,6 +104,7 @@ export class LessonControllerBase {
       select: {
         content: true,
         createdAt: true,
+        deletedAt: true,
         id: true,
 
         packageField: {
@@ -144,6 +147,7 @@ export class LessonControllerBase {
         select: {
           content: true,
           createdAt: true,
+          deletedAt: true,
           id: true,
 
           packageField: {
@@ -178,6 +182,7 @@ export class LessonControllerBase {
         select: {
           content: true,
           createdAt: true,
+          deletedAt: true,
           id: true,
 
           packageField: {
@@ -211,6 +216,7 @@ export class LessonControllerBase {
       ...query,
       select: {
         createdAt: true,
+        deletedAt: true,
         id: true,
 
         lesson: {
@@ -293,6 +299,7 @@ export class LessonControllerBase {
       ...query,
       select: {
         createdAt: true,
+        deletedAt: true,
         id: true,
 
         lesson: {
@@ -376,6 +383,7 @@ export class LessonControllerBase {
       select: {
         content: true,
         createdAt: true,
+        deletedAt: true,
         id: true,
 
         lesson: {
@@ -457,6 +465,7 @@ export class LessonControllerBase {
       ...query,
       select: {
         createdAt: true,
+        deletedAt: true,
         id: true,
 
         lesson: {

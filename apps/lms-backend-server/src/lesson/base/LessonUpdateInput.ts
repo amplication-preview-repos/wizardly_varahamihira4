@@ -15,10 +15,11 @@ import {
   IsString,
   MaxLength,
   IsOptional,
+  IsDate,
   ValidateNested,
 } from "class-validator";
-import { PackageModelWhereUniqueInput } from "../../packageModel/base/PackageModelWhereUniqueInput";
 import { Type } from "class-transformer";
+import { PackageModelWhereUniqueInput } from "../../packageModel/base/PackageModelWhereUniqueInput";
 import { PracticeUpdateManyWithoutLessonsInput } from "./PracticeUpdateManyWithoutLessonsInput";
 import { TestUpdateManyWithoutLessonsInput } from "./TestUpdateManyWithoutLessonsInput";
 import { TextMaterialUpdateManyWithoutLessonsInput } from "./TextMaterialUpdateManyWithoutLessonsInput";
@@ -37,6 +38,17 @@ class LessonUpdateInput {
     nullable: true,
   })
   content?: string | null;
+
+  @ApiProperty({
+    required: false,
+  })
+  @IsDate()
+  @Type(() => Date)
+  @IsOptional()
+  @Field(() => Date, {
+    nullable: true,
+  })
+  deletedAt?: Date | null;
 
   @ApiProperty({
     required: false,

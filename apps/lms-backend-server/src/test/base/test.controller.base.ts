@@ -43,6 +43,7 @@ export class TestControllerBase {
       },
       select: {
         createdAt: true,
+        deletedAt: true,
         id: true,
 
         lesson: {
@@ -66,6 +67,7 @@ export class TestControllerBase {
       ...args,
       select: {
         createdAt: true,
+        deletedAt: true,
         id: true,
 
         lesson: {
@@ -90,6 +92,7 @@ export class TestControllerBase {
       where: params,
       select: {
         createdAt: true,
+        deletedAt: true,
         id: true,
 
         lesson: {
@@ -131,6 +134,7 @@ export class TestControllerBase {
         },
         select: {
           createdAt: true,
+          deletedAt: true,
           id: true,
 
           lesson: {
@@ -164,6 +168,7 @@ export class TestControllerBase {
         where: params,
         select: {
           createdAt: true,
+          deletedAt: true,
           id: true,
 
           lesson: {
@@ -197,6 +202,7 @@ export class TestControllerBase {
       ...query,
       select: {
         createdAt: true,
+        deletedAt: true,
         id: true,
         isCorrect: true,
         orderNumber: true,

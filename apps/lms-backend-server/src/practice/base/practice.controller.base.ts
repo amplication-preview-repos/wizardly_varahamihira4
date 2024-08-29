@@ -45,6 +45,7 @@ export class PracticeControllerBase {
       },
       select: {
         createdAt: true,
+        deletedAt: true,
         id: true,
 
         lesson: {
@@ -68,6 +69,7 @@ export class PracticeControllerBase {
       ...args,
       select: {
         createdAt: true,
+        deletedAt: true,
         id: true,
 
         lesson: {
@@ -92,6 +94,7 @@ export class PracticeControllerBase {
       where: params,
       select: {
         createdAt: true,
+        deletedAt: true,
         id: true,
 
         lesson: {
@@ -133,6 +136,7 @@ export class PracticeControllerBase {
         },
         select: {
           createdAt: true,
+          deletedAt: true,
           id: true,
 
           lesson: {
@@ -166,6 +170,7 @@ export class PracticeControllerBase {
         where: params,
         select: {
           createdAt: true,
+          deletedAt: true,
           id: true,
 
           lesson: {
@@ -199,6 +204,7 @@ export class PracticeControllerBase {
       ...query,
       select: {
         createdAt: true,
+        deletedAt: true,
         id: true,
 
         practice: {

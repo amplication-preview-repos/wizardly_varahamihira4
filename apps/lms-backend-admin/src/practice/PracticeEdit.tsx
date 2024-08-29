@@ -4,6 +4,7 @@ import {
   Edit,
   SimpleForm,
   EditProps,
+  DateTimeInput,
   ReferenceInput,
   SelectInput,
   TextInput,
@@ -18,6 +19,7 @@ export const PracticeEdit = (props: EditProps): React.ReactElement => {
   return (
     <Edit {...props}>
       <SimpleForm>
+        <DateTimeInput label="deletedAt" source="deletedAt" />
         <ReferenceInput source="lesson.id" reference="Lesson" label="lesson">
           <SelectInput optionText={LessonTitle} />
         </ReferenceInput>

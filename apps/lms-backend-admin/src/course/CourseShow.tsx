@@ -18,6 +18,7 @@ export const CourseShow = (props: ShowProps): React.ReactElement => {
     <Show {...props}>
       <SimpleShowLayout>
         <DateField source="createdAt" label="Created At" />
+        <TextField label="deletedAt" source="deletedAt" />
         <TextField label="description" source="description" />
         <TextField label="ID" source="id" />
         <TextField label="language" source="language" />
@@ -38,6 +39,7 @@ export const CourseShow = (props: ShowProps): React.ReactElement => {
               <TextField source={COURSE_TITLE_FIELD} />
             </ReferenceField>
             <DateField source="createdAt" label="Created At" />
+            <TextField label="deletedAt" source="deletedAt" />
             <TextField label="endDate" source="endDate" />
             <TextField
               label="homeworkCheckEndDate"

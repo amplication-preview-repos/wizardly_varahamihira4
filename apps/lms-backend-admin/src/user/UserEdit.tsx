@@ -6,6 +6,7 @@ import {
   EditProps,
   ReferenceArrayInput,
   SelectArrayInput,
+  DateTimeInput,
   TextInput,
   PasswordInput,
   SelectInput,
@@ -28,6 +29,7 @@ export const UserEdit = (props: EditProps): React.ReactElement => {
         >
           <SelectArrayInput optionText={AnswerTitle} />
         </ReferenceArrayInput>
+        <DateTimeInput label="deletedAt" source="deletedAt" />
         <TextInput label="Email" source="email" type="email" />
         <TextInput label="First Name" source="firstName" />
         <TextInput label="Last Name" source="lastName" />

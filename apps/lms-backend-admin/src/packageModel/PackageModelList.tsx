@@ -24,6 +24,7 @@ export const PackageModelList = (props: ListProps): React.ReactElement => {
           <TextField source={COURSE_TITLE_FIELD} />
         </ReferenceField>
         <DateField source="createdAt" label="Created At" />
+        <TextField label="deletedAt" source="deletedAt" />
         <TextField label="endDate" source="endDate" />
         <TextField label="homeworkCheckEndDate" source="homeworkCheckEndDate" />
         <TextField label="ID" source="id" />

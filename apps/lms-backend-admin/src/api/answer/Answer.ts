@@ -4,6 +4,7 @@ import { User } from "../user/User";
 
 export type Answer = {
   createdAt: Date;
+  deletedAt: Date | null;
   id: string;
   isCorrect: boolean | null;
   orderNumber: number | null;

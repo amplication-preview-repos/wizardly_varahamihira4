@@ -21,6 +21,7 @@ export const TestShow = (props: ShowProps): React.ReactElement => {
     <Show {...props}>
       <SimpleShowLayout>
         <DateField source="createdAt" label="Created At" />
+        <TextField label="deletedAt" source="deletedAt" />
         <TextField label="ID" source="id" />
         <ReferenceField label="lesson" source="lesson.id" reference="Lesson">
           <TextField source={LESSON_TITLE_FIELD} />
@@ -30,6 +31,7 @@ export const TestShow = (props: ShowProps): React.ReactElement => {
         <ReferenceManyField reference="Answer" target="testId" label="Answers">
           <Datagrid rowClick="show">
             <DateField source="createdAt" label="Created At" />
+            <TextField label="deletedAt" source="deletedAt" />
             <TextField label="ID" source="id" />
             <BooleanField label="isCorrect" source="isCorrect" />
             <TextField label="orderNumber" source="orderNumber" />

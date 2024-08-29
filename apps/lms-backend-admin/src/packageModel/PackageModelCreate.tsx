@@ -24,6 +24,7 @@ export const PackageModelCreate = (props: CreateProps): React.ReactElement => {
         <ReferenceInput source="course.id" reference="Course" label="course">
           <SelectInput optionText={CourseTitle} />
         </ReferenceInput>
+        <DateTimeInput label="deletedAt" source="deletedAt" />
         <DateTimeInput label="endDate" source="endDate" />
         <DateTimeInput
           label="homeworkCheckEndDate"

@@ -46,6 +46,7 @@ export class AnswerControllerBase {
       },
       select: {
         createdAt: true,
+        deletedAt: true,
         id: true,
         isCorrect: true,
         orderNumber: true,
@@ -78,6 +79,7 @@ export class AnswerControllerBase {
       ...args,
       select: {
         createdAt: true,
+        deletedAt: true,
         id: true,
         isCorrect: true,
         orderNumber: true,
@@ -111,6 +113,7 @@ export class AnswerControllerBase {
       where: params,
       select: {
         createdAt: true,
+        deletedAt: true,
         id: true,
         isCorrect: true,
         orderNumber: true,
@@ -167,6 +170,7 @@ export class AnswerControllerBase {
         },
         select: {
           createdAt: true,
+          deletedAt: true,
           id: true,
           isCorrect: true,
           orderNumber: true,
@@ -209,6 +213,7 @@ export class AnswerControllerBase {
         where: params,
         select: {
           createdAt: true,
+          deletedAt: true,
           id: true,
           isCorrect: true,
           orderNumber: true,

@@ -20,6 +20,7 @@ const existingId = "existingId";
 const CREATE_INPUT = {
   code: "exampleCode",
   createdAt: new Date(),
+  deletedAt: new Date(),
   id: "exampleId",
   name: "exampleName",
   updatedAt: new Date(),
@@ -27,6 +28,7 @@ const CREATE_INPUT = {
 const CREATE_RESULT = {
   code: "exampleCode",
   createdAt: new Date(),
+  deletedAt: new Date(),
   id: "exampleId",
   name: "exampleName",
   updatedAt: new Date(),
@@ -35,6 +37,7 @@ const FIND_MANY_RESULT = [
   {
     code: "exampleCode",
     createdAt: new Date(),
+    deletedAt: new Date(),
     id: "exampleId",
     name: "exampleName",
     updatedAt: new Date(),
@@ -43,6 +46,7 @@ const FIND_MANY_RESULT = [
 const FIND_ONE_RESULT = {
   code: "exampleCode",
   createdAt: new Date(),
+  deletedAt: new Date(),
   id: "exampleId",
   name: "exampleName",
   updatedAt: new Date(),
@@ -131,6 +135,7 @@ describe("Locale", () => {
       .expect({
         ...CREATE_RESULT,
         createdAt: CREATE_RESULT.createdAt.toISOString(),
+        deletedAt: CREATE_RESULT.deletedAt.toISOString(),
         updatedAt: CREATE_RESULT.updatedAt.toISOString(),
       });
   });
@@ -143,6 +148,7 @@ describe("Locale", () => {
         {
           ...FIND_MANY_RESULT[0],
           createdAt: FIND_MANY_RESULT[0].createdAt.toISOString(),
+          deletedAt: FIND_MANY_RESULT[0].deletedAt.toISOString(),
           updatedAt: FIND_MANY_RESULT[0].updatedAt.toISOString(),
         },
       ]);
@@ -166,6 +172,7 @@ describe("Locale", () => {
       .expect({
         ...FIND_ONE_RESULT,
         createdAt: FIND_ONE_RESULT.createdAt.toISOString(),
+        deletedAt: FIND_ONE_RESULT.deletedAt.toISOString(),
         updatedAt: FIND_ONE_RESULT.updatedAt.toISOString(),
       });
   });
@@ -179,6 +186,7 @@ describe("Locale", () => {
       .expect({
         ...CREATE_RESULT,
         createdAt: CREATE_RESULT.createdAt.toISOString(),
+        deletedAt: CREATE_RESULT.deletedAt.toISOString(),
         updatedAt: CREATE_RESULT.updatedAt.toISOString(),
       })
       .then(function () {

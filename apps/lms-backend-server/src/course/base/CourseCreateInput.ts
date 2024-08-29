@@ -11,20 +11,34 @@ https://docs.amplication.com/how-to/custom-code
   */
 import { InputType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
+
 import {
+  IsDate,
+  IsOptional,
   IsString,
   MaxLength,
-  IsOptional,
   ValidateNested,
   IsNumber,
   Min,
   Max,
 } from "class-validator";
-import { PackageModelCreateNestedManyWithoutCoursesInput } from "./PackageModelCreateNestedManyWithoutCoursesInput";
+
 import { Type } from "class-transformer";
+import { PackageModelCreateNestedManyWithoutCoursesInput } from "./PackageModelCreateNestedManyWithoutCoursesInput";
 
 @InputType()
 class CourseCreateInput {
+  @ApiProperty({
+    required: false,
+  })
+  @IsDate()
+  @Type(() => Date)
+  @IsOptional()
+  @Field(() => Date, {
+    nullable: true,
+  })
+  deletedAt?: Date | null;
+
   @ApiProperty({
     required: false,
     type: String,

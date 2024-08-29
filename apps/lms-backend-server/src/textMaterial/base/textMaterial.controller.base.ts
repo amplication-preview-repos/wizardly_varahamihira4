@@ -43,6 +43,7 @@ export class TextMaterialControllerBase {
       select: {
         content: true,
         createdAt: true,
+        deletedAt: true,
         id: true,
 
         lesson: {
@@ -66,6 +67,7 @@ export class TextMaterialControllerBase {
       select: {
         content: true,
         createdAt: true,
+        deletedAt: true,
         id: true,
 
         lesson: {
@@ -90,6 +92,7 @@ export class TextMaterialControllerBase {
       select: {
         content: true,
         createdAt: true,
+        deletedAt: true,
         id: true,
 
         lesson: {
@@ -131,6 +134,7 @@ export class TextMaterialControllerBase {
         select: {
           content: true,
           createdAt: true,
+          deletedAt: true,
           id: true,
 
           lesson: {
@@ -164,6 +168,7 @@ export class TextMaterialControllerBase {
         select: {
           content: true,
           createdAt: true,
+          deletedAt: true,
           id: true,
 
           lesson: {

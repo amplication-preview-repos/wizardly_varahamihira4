@@ -14,6 +14,7 @@ import { ApiProperty } from "@nestjs/swagger";
 import { AnswerListRelationFilter } from "../../answer/base/AnswerListRelationFilter";
 import { ValidateNested, IsOptional, IsEnum } from "class-validator";
 import { Type } from "class-transformer";
+import { DateTimeNullableFilter } from "../../util/DateTimeNullableFilter";
 import { StringNullableFilter } from "../../util/StringNullableFilter";
 import { StringFilter } from "../../util/StringFilter";
 import { EnumUserRole } from "./EnumUserRole";
@@ -33,6 +34,17 @@ class UserWhereInput {
     nullable: true,
   })
   answers?: AnswerListRelationFilter;
+
+  @ApiProperty({
+    required: false,
+    type: DateTimeNullableFilter,
+  })
+  @Type(() => DateTimeNullableFilter)
+  @IsOptional()
+  @Field(() => DateTimeNullableFilter, {
+    nullable: true,
+  })
+  deletedAt?: DateTimeNullableFilter;
 
   @ApiProperty({
     required: false,
