@@ -1,0 +1,150 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DB_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Course {
+  createdAt   DateTime       @default(now())
+  description String?
+  id          String         @id @default(cuid())
+  language    String?
+  packages    PackageModel[]
+  price       Float?
+  title       String?
+  updatedAt   DateTime       @updatedAt
+}
+
+model PackageModel {
+  course               Course?       @relation(fields: [courseId], references: [id])
+  courseId             String?
+  createdAt            DateTime      @default(now())
+  endDate              DateTime?
+  homeworkCheckEndDate DateTime?
+  id                   String        @id @default(cuid())
+  lessons              Lesson[]
+  sequenceNumber       Int?
+  startDate            DateTime?
+  title                String?
+  updatedAt            DateTime      @updatedAt
+  userPackages         UserPackage[]
+}
+
+model Video {
+  createdAt DateTime @default(now())
+  id        String   @id @default(cuid())
+  lesson    Lesson?  @relation(fields: [lessonId], references: [id])
+  lessonId  String?
+  updatedAt DateTime @updatedAt
+  url       String?
+}
+
+model Locale {
+  code      String?
+  createdAt DateTime @default(now())
+  id        String   @id @default(cuid())
+  name      String?
+  updatedAt DateTime @updatedAt
+}
+
+model TextMaterial {
+  content   String?
+  createdAt DateTime @default(now())
+  id        String   @id @default(cuid())
+  lesson    Lesson?  @relation(fields: [lessonId], references: [id])
+  lessonId  String?
+  updatedAt DateTime @updatedAt
+}
+
+model Lesson {
+  content        String?
+  createdAt      DateTime       @default(now())
+  id             String         @id @default(cuid())
+  packageField   PackageModel?  @relation(fields: [packageFieldId], references: [id])
+  packageFieldId String?
+  practices      Practice[]
+  tests          Test[]
+  textMaterials  TextMaterial[]
+  title          String?
+  updatedAt      DateTime       @updatedAt
+  videos         Video[]
+}
+
+model Test {
+  answers   Answer[]
+  createdAt DateTime @default(now())
+  id        String   @id @default(cuid())
+  lesson    Lesson?  @relation(fields: [lessonId], references: [id])
+  lessonId  String?
+  questions Json?
+  updatedAt DateTime @updatedAt
+}
+
+model Practice {
+  createdAt             DateTime               @default(now())
+  id                    String                 @id @default(cuid())
+  lesson                Lesson?                @relation(fields: [lessonId], references: [id])
+  lessonId              String?
+  textTask              String?
+  updatedAt             DateTime               @updatedAt
+  userPracticeResponses UserPracticeResponse[]
+}
+
+model UserPackage {
+  createdAt      DateTime      @default(now())
+  id             String        @id @default(cuid())
+  packageField   PackageModel? @relation(fields: [packageFieldId], references: [id])
+  packageFieldId String?
+  purchaseDate   DateTime?
+  updatedAt      DateTime      @updatedAt
+  user           User?         @relation(fields: [userId], references: [id])
+  userId         String?
+}
+
+model Answer {
+  createdAt   DateTime @default(now())
+  id          String   @id @default(cuid())
+  isCorrect   Boolean?
+  orderNumber Int?
+  response    Json?
+  test        Test?    @relation(fields: [testId], references: [id])
+  testId      String?
+  translation Json?
+  updatedAt   DateTime @updatedAt
+  user        User?    @relation(fields: [userId], references: [id])
+  userId      String?
+}
+
+model User {
+  answers               Answer[]
+  createdAt             DateTime               @default(now())
+  email                 String?                @unique
+  firstName             String?
+  id                    String                 @id @default(cuid())
+  lastName              String?
+  password              String
+  role                  EnumUserRole?
+  roles                 Json
+  updatedAt             DateTime               @updatedAt
+  userPackages          UserPackage[]
+  userPracticeResponses UserPracticeResponse[]
+  username              String                 @unique
+}
+
+model UserPracticeResponse {
+  createdAt  DateTime  @default(now())
+  id         String    @id @default(cuid())
+  practice   Practice? @relation(fields: [practiceId], references: [id])
+  practiceId String?
+  response   String?
+  updatedAt  DateTime  @updatedAt
+  user       User?     @relation(fields: [userId], references: [id])
+  userId     String?
+}
+
+enum EnumUserRole {
+  Option1
+}
